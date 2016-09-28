@@ -1,0 +1,112 @@
+//
+//  PrefixHeader.pch
+//  GlideView
+//
+//  Created by majianjie on 15/12/3.
+//  Copyright © 2015年 majianjie. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ZZCommon.h"
+
+#import "NSDate+Extension.h"
+#import "NSMutableDictionary+Category.h"
+#import "NSString+Category.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Extionsion.h"
+#import "UIView+Extension.h"
+#import "UIWindow+Extension.h"
+#import "UIImage+Extension.h"
+
+#import <Masonry.h>
+#import "AColorAndFont.h"
+
+#ifdef DEBUG //处于开发阶段
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else       //处于发布阶段
+#define NSLog(...)
+#endif
+
+//=====================第三方需要的数据=====================
+//友盟Appkey
+#define UMeng_Appkey @"55a2812767e58e41a7001d50"
+
+//极光Appkey
+#define JPush_Appkey @"ccd3f71b5aa7e51bb5fee839"
+
+//回调url
+#define Handler_URL @"http://www.careerdream.org"
+
+//微信AppId
+#define Wechat_AppID @"wx2f66345f4a132c12"
+//微信appSecret
+#define Wechat_AppSecret @"a31f1f8c607df0c5f6016916fe5d00d1"
+
+//新浪微博AppId
+#define SinaWeibo_AppID @"3165197267"
+//微博appSecret
+#define SinaWeibo_AppSecret @"d0d1f3ec77d7e58180661234d2a58ee5"
+
+
+//用来获取keychain中的内容
+#define Service_Name @"com.Careerdream.Careerdream"
+
+// 颜色
+#define HMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define HMRandomColor HMColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+// 是否为4inch
+#define FourInch ([UIScreen mainScreen].bounds.size.height == 568.0)
+
+// 导航栏标题的字体
+#define HMNavigationTitleFont [UIFont boldSystemFontOfSize:20]
+
+// 应用信息
+#define HMAppKey @"3141202626"
+#define HMAppSecret @"ee9de4d2431be061b22fe328332a5228"
+#define HMRedirectURI @"http://www.itheima.com"
+
+// 屏幕尺寸
+#define HMScreenW [UIScreen mainScreen].bounds.size.width
+
+// cell的计算参数
+// cell之间的间距
+#define HMStatusCellMargin 10
+
+// cell的内边距
+#define HMStatusCellInset 10
+
+// 原创微博昵称字体
+#define HMStatusOrginalNameFont [UIFont systemFontOfSize:13]
+// 原创微博时间字体
+#define HMStatusOrginalTimeFont [UIFont systemFontOfSize:11]
+// 原创微博来源字体
+#define HMStatusOrginalSourceFont HMStatusOrginalTimeFont
+// 原创微博正文字体
+#define HMStatusOrginalTextFont [UIFont systemFontOfSize:14]
+
+// 点赞View中的字体大小
+#define WXStatusApprovTextFont [UIFont systemFontOfSize:17]
+
+// 转发微博昵称字体
+#define HMStatusRetweetedNameFont HMStatusOrginalNameFont
+// 转发微博正文字体
+#define HMStatusRetweetedTextFont HMStatusOrginalTextFont
+
+// 占位文字颜色
+#define JJPlaceholderColorKey @"placeholderLabel.textColor"
+// 默认的占位文字颜色
+#define JJPlaceholderDefaultColor [UIColor grayColor]
+// 聚焦的占位文字颜色
+#define JJPlaceholderFocusColor [UIColor whiteColor]
+
+
+#endif /* PrefixHeader_pch */
