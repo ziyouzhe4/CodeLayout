@@ -1,10 +1,7 @@
 Pod::Spec.new do |s|  
   s.name             = "CodeLayout"  
   s.version          = "1.0.0"  
-  s.summary          = "A layout view used on iOS."  
-  s.description      = <<-DESC  
-                       It is a marquee view used on iOS, which implement by Objective-C.  
-                       DESC  
+  s.summary          = "A layout view used on iOS."    
   s.homepage         = "https://github.com/JJCoderiOS/CodeLayout"  
   # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"  
   s.license          = 'MIT'  
